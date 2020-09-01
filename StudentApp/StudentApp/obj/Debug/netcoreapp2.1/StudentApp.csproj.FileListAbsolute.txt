@@ -1,0 +1,11 @@
+D:\JPTVR18C#_Russovits\StudentApp\StudentApp\bin\Debug\netcoreapp2.1\StudentApp.deps.json
+D:\JPTVR18C#_Russovits\StudentApp\StudentApp\bin\Debug\netcoreapp2.1\StudentApp.runtimeconfig.json
+D:\JPTVR18C#_Russovits\StudentApp\StudentApp\bin\Debug\netcoreapp2.1\StudentApp.runtimeconfig.dev.json
+D:\JPTVR18C#_Russovits\StudentApp\StudentApp\bin\Debug\netcoreapp2.1\StudentApp.dll
+D:\JPTVR18C#_Russovits\StudentApp\StudentApp\bin\Debug\netcoreapp2.1\StudentApp.pdb
+D:\JPTVR18C#_Russovits\StudentApp\StudentApp\obj\Debug\netcoreapp2.1\StudentApp.csprojAssemblyReference.cache
+D:\JPTVR18C#_Russovits\StudentApp\StudentApp\obj\Debug\netcoreapp2.1\StudentApp.csproj.CoreCompileInputs.cache
+D:\JPTVR18C#_Russovits\StudentApp\StudentApp\obj\Debug\netcoreapp2.1\StudentApp.AssemblyInfoInputs.cache
+D:\JPTVR18C#_Russovits\StudentApp\StudentApp\obj\Debug\netcoreapp2.1\StudentApp.AssemblyInfo.cs
+D:\JPTVR18C#_Russovits\StudentApp\StudentApp\obj\Debug\netcoreapp2.1\StudentApp.dll
+D:\JPTVR18C#_Russovits\StudentApp\StudentApp\obj\Debug\netcoreapp2.1\StudentApp.pdb

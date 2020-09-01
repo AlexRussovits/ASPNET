@@ -1,0 +1,11 @@
+D:\JPTVR18C#_Russovits\HelloApp\HelloApp\bin\Debug\netcoreapp2.1\HelloApp.deps.json
+D:\JPTVR18C#_Russovits\HelloApp\HelloApp\bin\Debug\netcoreapp2.1\HelloApp.runtimeconfig.json
+D:\JPTVR18C#_Russovits\HelloApp\HelloApp\bin\Debug\netcoreapp2.1\HelloApp.runtimeconfig.dev.json
+D:\JPTVR18C#_Russovits\HelloApp\HelloApp\bin\Debug\netcoreapp2.1\HelloApp.dll
+D:\JPTVR18C#_Russovits\HelloApp\HelloApp\bin\Debug\netcoreapp2.1\HelloApp.pdb
+D:\JPTVR18C#_Russovits\HelloApp\HelloApp\obj\Debug\netcoreapp2.1\HelloApp.csprojAssemblyReference.cache
+D:\JPTVR18C#_Russovits\HelloApp\HelloApp\obj\Debug\netcoreapp2.1\HelloApp.csproj.CoreCompileInputs.cache
+D:\JPTVR18C#_Russovits\HelloApp\HelloApp\obj\Debug\netcoreapp2.1\HelloApp.AssemblyInfoInputs.cache
+D:\JPTVR18C#_Russovits\HelloApp\HelloApp\obj\Debug\netcoreapp2.1\HelloApp.AssemblyInfo.cs
+D:\JPTVR18C#_Russovits\HelloApp\HelloApp\obj\Debug\netcoreapp2.1\HelloApp.dll
+D:\JPTVR18C#_Russovits\HelloApp\HelloApp\obj\Debug\netcoreapp2.1\HelloApp.pdb
