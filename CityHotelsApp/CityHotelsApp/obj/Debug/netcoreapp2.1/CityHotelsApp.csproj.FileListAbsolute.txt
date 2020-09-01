@@ -1,0 +1,11 @@
+D:\JPTVR18C#_Russovits\CityHotelsApp\CityHotelsApp\bin\Debug\netcoreapp2.1\CityHotelsApp.deps.json
+D:\JPTVR18C#_Russovits\CityHotelsApp\CityHotelsApp\bin\Debug\netcoreapp2.1\CityHotelsApp.runtimeconfig.json
+D:\JPTVR18C#_Russovits\CityHotelsApp\CityHotelsApp\bin\Debug\netcoreapp2.1\CityHotelsApp.runtimeconfig.dev.json
+D:\JPTVR18C#_Russovits\CityHotelsApp\CityHotelsApp\bin\Debug\netcoreapp2.1\CityHotelsApp.dll
+D:\JPTVR18C#_Russovits\CityHotelsApp\CityHotelsApp\bin\Debug\netcoreapp2.1\CityHotelsApp.pdb
+D:\JPTVR18C#_Russovits\CityHotelsApp\CityHotelsApp\obj\Debug\netcoreapp2.1\CityHotelsApp.csprojAssemblyReference.cache
+D:\JPTVR18C#_Russovits\CityHotelsApp\CityHotelsApp\obj\Debug\netcoreapp2.1\CityHotelsApp.csproj.CoreCompileInputs.cache
+D:\JPTVR18C#_Russovits\CityHotelsApp\CityHotelsApp\obj\Debug\netcoreapp2.1\CityHotelsApp.AssemblyInfoInputs.cache
+D:\JPTVR18C#_Russovits\CityHotelsApp\CityHotelsApp\obj\Debug\netcoreapp2.1\CityHotelsApp.AssemblyInfo.cs
+D:\JPTVR18C#_Russovits\CityHotelsApp\CityHotelsApp\obj\Debug\netcoreapp2.1\CityHotelsApp.dll
+D:\JPTVR18C#_Russovits\CityHotelsApp\CityHotelsApp\obj\Debug\netcoreapp2.1\CityHotelsApp.pdb

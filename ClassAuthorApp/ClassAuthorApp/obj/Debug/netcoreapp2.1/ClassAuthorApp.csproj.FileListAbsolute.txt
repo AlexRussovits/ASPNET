@@ -1,0 +1,11 @@
+D:\JPTVR18C#_Russovits\ClassAuthorApp\ClassAuthorApp\bin\Debug\netcoreapp2.1\ClassAuthorApp.deps.json
+D:\JPTVR18C#_Russovits\ClassAuthorApp\ClassAuthorApp\bin\Debug\netcoreapp2.1\ClassAuthorApp.runtimeconfig.json
+D:\JPTVR18C#_Russovits\ClassAuthorApp\ClassAuthorApp\bin\Debug\netcoreapp2.1\ClassAuthorApp.runtimeconfig.dev.json
+D:\JPTVR18C#_Russovits\ClassAuthorApp\ClassAuthorApp\bin\Debug\netcoreapp2.1\ClassAuthorApp.dll
+D:\JPTVR18C#_Russovits\ClassAuthorApp\ClassAuthorApp\bin\Debug\netcoreapp2.1\ClassAuthorApp.pdb
+D:\JPTVR18C#_Russovits\ClassAuthorApp\ClassAuthorApp\obj\Debug\netcoreapp2.1\ClassAuthorApp.csprojAssemblyReference.cache
+D:\JPTVR18C#_Russovits\ClassAuthorApp\ClassAuthorApp\obj\Debug\netcoreapp2.1\ClassAuthorApp.csproj.CoreCompileInputs.cache
+D:\JPTVR18C#_Russovits\ClassAuthorApp\ClassAuthorApp\obj\Debug\netcoreapp2.1\ClassAuthorApp.AssemblyInfoInputs.cache
+D:\JPTVR18C#_Russovits\ClassAuthorApp\ClassAuthorApp\obj\Debug\netcoreapp2.1\ClassAuthorApp.AssemblyInfo.cs
+D:\JPTVR18C#_Russovits\ClassAuthorApp\ClassAuthorApp\obj\Debug\netcoreapp2.1\ClassAuthorApp.dll
+D:\JPTVR18C#_Russovits\ClassAuthorApp\ClassAuthorApp\obj\Debug\netcoreapp2.1\ClassAuthorApp.pdb
