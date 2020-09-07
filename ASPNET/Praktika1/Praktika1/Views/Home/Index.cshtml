@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Приветствие</h2>
+<div>
+    @ViewBag.Hello
+    <br />
+    @ViewBag.Greeting
+    @ViewBag.Greeting, my World!
+    <hr />
+    <h2>Приглашаю всех на захватывающую вечеринку!</h2>
+    <h3>Вы приглашены, нужно только заполнять форму!</h3>
+    <!--Создание ссылки Helper-->
+    <div class="btn btn-default">
+        @Html.ActionLink("Регистрация на вечеринку", "RegisterForm")
+    </div>
+</div>
+

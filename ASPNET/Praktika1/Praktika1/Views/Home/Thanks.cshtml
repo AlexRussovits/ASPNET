@@ -1,0 +1,24 @@
+﻿@model Praktika1.Models.QuestResponse
+
+@{
+    ViewBag.Title = "Thanks";
+}
+
+<h2>Thanks</h2>
+<div class="text-center">
+    <h1>Ваш ответ получен, @Model.Name</h1>
+    @if(Model.WillAttend==true)
+    {
+        @:Ждём вас, <b>@Model.Name</b>
+    }
+    else
+    {
+        @:Жаль, что вы не сможете прийти!
+    }
+</div>
+<hr />
+<div class="btn btn-default">
+    @Html.ActionLink("Go to Home Page", "Index") <!-- Ссылка Razor-->
+</div>
+
+
