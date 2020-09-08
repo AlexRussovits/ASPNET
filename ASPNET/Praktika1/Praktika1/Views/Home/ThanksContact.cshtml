@@ -1,0 +1,17 @@
+﻿@model Praktika1.Models.ContactResponse
+
+@{
+    ViewBag.Title = "ThanksContact";
+}
+
+<h2>Thanks for contact</h2>
+
+<div class="text-center">
+    <h1>Ваш ответ получен, @Model.Name</h1>
+     <h1>Спасибо за сообщение!</h1>
+</div>
+<hr />
+<div class="btn btn-default">
+    @Html.ActionLink("Go to Home Page", "Index") <!-- Ссылка Razor-->
+</div>
+

@@ -3,33 +3,50 @@
 @{
     ViewBag.Title = "RegisterForm";
 }
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device=width"/>
+    <link rel="stylesheet" type="text/css" href="~/Content/Site.css" />
+    <title>RegisterForm</title>
+</head>
+<body>
+    <div>
+        @Html.ValidationSummary()
 
-<h2>RegisterForm</h2>
-@using (Html.BeginForm())
-{
-    <div class="form-group">
-        <label>Your Name:</label>
-        @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
-        <label>Your E-Mail:</label>
-        @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
-        <label>Your Phone:</label>
-        @Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })
 
-        <div class="form-group">
-            <label>Should I except you at the party?</label>
-            @Html.DropDownListFor(x=>x.WillAttend,
-    new[]
-    {
-         new SelectListItem(){Text="Yes", Value=bool.TrueString},
-         new SelectListItem(){Text="No", Value=bool.FalseString}
-    }
-    )
+        <h2>RegisterForm</h2>
+        @using (Html.BeginForm())
+        {
+            <div class="form-group">
+                <label>Your Name:</label>
+                @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+                <label>Your E-Mail:</label>
+                @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+                <label>Your Phone:</label>
+                @Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })
+
+                <div class="form-group">
+                    <label>Should I except you at the party?</label>
+                    @Html.DropDownListFor(x=>x.WillAttend,
+            new[]
+            {
+                 new SelectListItem(){Text="Yes", Value=bool.TrueString},
+                 new SelectListItem(){Text="No", Value=bool.FalseString}
+            }
+            )
+
+                </div>
+
+                <div class="text-center">
+                    <input type="submit" value="Send Answer" class="btn btn-danger" />
+                </div>
+            </div>
+
+
+
+        }
 
         </div>
-
-        <div class="text-center">
-            <input type="submit" value="Send Answer" class="btn btn-danger"/>
-        </div>
-    </div>
-
-}
+    </body>
+</html>

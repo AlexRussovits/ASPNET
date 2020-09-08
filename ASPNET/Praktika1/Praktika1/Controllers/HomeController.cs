@@ -39,7 +39,35 @@ namespace Praktika1.Controllers
         [HttpPost] //accept data from the form
         public ViewResult RegisterForm(QuestResponse guestResponse)
         {
-            return View("Thanks", guestResponse);
+            if(ModelState.IsValid)
+            {
+               return View("Thanks", guestResponse);
+            }else
+            {
+                return View();
+            }
+            
+        }
+
+        [HttpGet]
+       
+        public ViewResult ContactForm()
+        {
+            return View();
+        }
+
+        [HttpPost]
+
+        public ViewResult ContactForm(ContactResponse SendMessage)
+        {
+            if (ModelState.IsValid)
+            {
+                return View("ThanksContact", SendMessage);
+            }
+            else
+            {
+                return View();
+            }
         }
     }
 }
