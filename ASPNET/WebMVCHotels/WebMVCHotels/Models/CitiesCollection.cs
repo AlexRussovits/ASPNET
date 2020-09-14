@@ -33,7 +33,7 @@ namespace WebMVCHotels.Models
                 Title = "Tartu",
                 Hotels = new List<Hotel>()
                 {
-                    new Hotel {Id = 4, Name = "Art Hotel Pallas  Tartu", Services = "Air conditioning Free Wifi Breakfast ",
+                    new Hotel {Id = 4, Name = "Art Hotel Pallas  Tartu", Services = "Air conditioning Free Wifi Breakfast",
                         PhotoFile = "\\Content\\PallasTarty.png", Aadress = "Ravala Puiestee 3"},
                     new Hotel {Id = 5, Name = "Hotel Tartu", Services = "Free Wifi Breakfast included",
                         PhotoFile = "\\Content\\Tarty.png", Aadress = "Soola, 3"}                   

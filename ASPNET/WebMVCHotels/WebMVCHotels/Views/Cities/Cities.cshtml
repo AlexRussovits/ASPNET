@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Cities";
+}
+
+<h2>Cities</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Cities</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var city in ViewBag.Cities)
+        {
+        <tr>
+            <td>@city.Id</td>
+            <td>@city.Title</td>          
+            <td>
+            @{ 
+                String str = "Hotels (" + city.Hotels.Count.ToString() + ")";
+            }
+            @Html.ActionLink(str,"Hotels", new { id = city.Id })</td>
+
+        </tr>
+        }
+    </tbody>
+</table>

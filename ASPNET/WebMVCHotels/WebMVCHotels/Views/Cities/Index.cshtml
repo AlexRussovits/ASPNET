@@ -11,10 +11,9 @@
     <div>
         @foreach(var hotel in city.Hotels)
         {
-            <div style="width: 300px; float:left;">
+            <div style="width: 300px; float:left; margin:15px;">
                 <h4>@hotel.Name</h4>
-                <img class="thumbnail" src="@hotel.PhotoFile"/>
-
+                <img class="myimg" src="@hotel.PhotoFile"/>
                 @Html.ActionLink("Детали", "Details", new { id = hotel.Id})
             </div>
         }

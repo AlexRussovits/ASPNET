@@ -73,3 +73,4 @@ D:\JPTVR18C#_Russovits\ASPNET\WebMVCHotels\WebMVCHotels\bin\Microsoft.CodeDom.Pr
 D:\JPTVR18C#_Russovits\ASPNET\WebMVCHotels\WebMVCHotels\obj\Debug\WebMVCHotels.csproj.CopyComplete
 D:\JPTVR18C#_Russovits\ASPNET\WebMVCHotels\WebMVCHotels\obj\Debug\WebMVCHotels.dll
 D:\JPTVR18C#_Russovits\ASPNET\WebMVCHotels\WebMVCHotels\obj\Debug\WebMVCHotels.pdb
+D:\JPTVR18C#_Russovits\ASPNET\WebMVCHotels\WebMVCHotels\obj\Debug\WebMVCHotels.csprojAssemblyReference.cache

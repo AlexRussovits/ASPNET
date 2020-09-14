@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Hotels";
+}
+
+<h2>Hotels</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Hotel</th>
+            <th>Address</th>
+            <th>Services</th>
+            <th>Detail</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var city in ViewBag.Cities)
+        {
+            if (city.Id == ViewBag.CityId)
+            {
+                foreach (var hotel in city.Hotels)
+                {
+                    <tr>
+                        <td>@hotel.Name</td>
+                        <td>@hotel.Aadress</td>
+                        <td>@hotel.Services</td>
+                        <td>@Html.ActionLink("Подробнее...", "Details", new { id = city.Id })</td>
+                    </tr>
+
+                }
+                <p>
+                    Всего отелей в @city.Title: @city.Hotels.Count
+                </p>
+                @Html.ActionLink("Back to List", "Index")
+            }
+        }
+
+    </tbody>
+</table>
