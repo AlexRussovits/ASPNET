@@ -29,6 +29,7 @@ namespace FootBallPlayer_JPTVR18.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Player player = db.Players.Find(id);
+            player = db.Players.Include(p => p.Team).FirstOrDefault(t => t.Id == id);
             if (player == null)
             {
                 return HttpNotFound();
@@ -71,7 +72,8 @@ namespace FootBallPlayer_JPTVR18.Controllers
                     player.PhotoType = Image.ContentType;
                     player.Photo = new byte[Image.ContentLength];
                     Image.InputStream.Read(player.Photo, 0, Image.ContentLength);
-                }
+                }
+
                 db.Players.Add(player);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -112,7 +114,8 @@ namespace FootBallPlayer_JPTVR18.Controllers
                     player.PhotoType = Image.ContentType;
                     player.Photo = new byte[Image.ContentLength];
                     Image.InputStream.Read(player.Photo, 0, Image.ContentLength);
-                }
+                }
+
                 db.Entry(player).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");

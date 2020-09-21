@@ -17,7 +17,8 @@ namespace FootBallPlayer_JPTVR18.Controllers
         // GET: Teams
         public ActionResult Index()
         {
-            return View(db.Teams.ToList());
+            // order by name
+            return View(db.Teams.OrderBy(a=>a.Name).ToList());
         }
 
         // GET: Teams/Details/5

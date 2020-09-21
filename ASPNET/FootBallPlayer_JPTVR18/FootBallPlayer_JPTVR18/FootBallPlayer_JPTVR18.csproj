@@ -130,6 +130,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PlayersController.cs" />
     <Compile Include="Controllers\TeamsController.cs" />
+    <Compile Include="Controllers\TeamsPartialController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -184,6 +185,12 @@
     <Content Include="Views\Players\Details.cshtml" />
     <Content Include="Views\Players\Edit.cshtml" />
     <Content Include="Views\Players\Index.cshtml" />
+    <Content Include="Views\TeamsPartial\Create.cshtml" />
+    <Content Include="Views\TeamsPartial\Delete.cshtml" />
+    <Content Include="Views\TeamsPartial\Details.cshtml" />
+    <Content Include="Views\TeamsPartial\Edit.cshtml" />
+    <Content Include="Views\TeamsPartial\Index.cshtml" />
+    <Content Include="Views\TeamsPartial\PlayersInTeam.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -23,6 +23,9 @@
         <th>
             @Html.DisplayNameFor(model => model.Position)
         </th>
+        <th>
+
+        </th>
     </tr>
 
     @foreach (var item in Model)
@@ -39,12 +42,6 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Position)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Photo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PhotoType)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
