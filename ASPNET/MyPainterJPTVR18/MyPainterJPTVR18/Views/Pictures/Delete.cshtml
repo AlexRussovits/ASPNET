@@ -43,12 +43,11 @@
             @Html.DisplayFor(model => model.Canvas)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CanvasType)
-        </dt>
-
         <dd>
-            @Html.DisplayFor(model => model.CanvasType)
+            @if (Model.Canvas != null)
+            {
+                <img src="@Url.Action("GetImage", new { Model.Id })" class="img-edit" />
+            }
         </dd>
 
     </dl>

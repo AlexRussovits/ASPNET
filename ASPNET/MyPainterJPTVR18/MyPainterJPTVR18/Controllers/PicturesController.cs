@@ -32,12 +32,15 @@ namespace MyPainterJPTVR18.Controllers
             {
                 return HttpNotFound();
             }
+
+            picture = db.Pictures.Include(p => p.painter).FirstOrDefault(t => t.Id == id);
             return View(picture);
         }
 
         // GET: Pictures/Create
         public ActionResult Create()
         {
+            ViewBag.PainterId = new SelectList(db.Painters,"id","Name");
             return View();
         }
 
@@ -46,10 +49,16 @@ namespace MyPainterJPTVR18.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Title,Year,Museum,Canvas,CanvasType")] Picture picture)
+        public ActionResult Create([Bind(Include = "Id,Title,Year,Museum,Canvas,CanvasType, PainterId")] Picture picture, HttpPostedFileBase Image)
         {
             if (ModelState.IsValid)
             {
+                if (Image != null)
+                {
+                    picture.CanvasType = Image.ContentType;
+                    picture.Canvas = new byte[Image.ContentLength];
+                    Image.InputStream.Read(picture.Canvas, 0, Image.ContentLength);
+                }
                 db.Pictures.Add(picture);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -70,6 +79,7 @@ namespace MyPainterJPTVR18.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.PainterId = new SelectList(db.Painters, "id", "Name");
             return View(picture);
         }
 
@@ -78,10 +88,16 @@ namespace MyPainterJPTVR18.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Title,Year,Museum,Canvas,CanvasType")] Picture picture)
+        public ActionResult Edit([Bind(Include = "Id,Title,Year,Museum,Canvas,CanvasType, PainterId")] Picture picture, HttpPostedFileBase Image)
         {
             if (ModelState.IsValid)
             {
+                if (Image != null)
+                {
+                    picture.CanvasType = Image.ContentType;
+                    picture.Canvas = new byte[Image.ContentLength];
+                    Image.InputStream.Read(picture.Canvas, 0, Image.ContentLength);
+                }
                 db.Entry(picture).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -122,6 +138,17 @@ namespace MyPainterJPTVR18.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        public FileContentResult GetImage(int id)
+        {
+            //запрос в БД таблица Players по переданному id
+            Picture picture = db.Pictures.FirstOrDefault(p => p.Id == id);
+            if (picture != null)
+            {
+                return File(picture.Canvas, picture.CanvasType);
+            }
+            return null;
         }
     }
 }

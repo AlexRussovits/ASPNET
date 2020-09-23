@@ -4,26 +4,35 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
-
-<div>
-    <h4>Player - @Model.Name (Картина - @Model.Picture.Title)</h4>
-    <hr />
-
-    <div class="panel panel-default">
-        <div class="panel-body">
+<h2>Художники и картины</h2>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+            <h4>@Model.Name</h4>
+            <p>
+                <b>
+                    Country:
+                </b>
+                @Model.Country
+            </p>
             @if (Model.Photo != null)
             {
-                <img src="@Url.Action("GetImage", new { Model.Id })" class="img-rounded" />
+                <img src="@Url.Action("GetImage", new { Model.Id })" class="img-rounded img-details" />
             }
-            <h3>@Html.DisplayFor(model => model.Name)</h3>
-            <p>@Html.DisplayNameFor(model => model.Age) - @Html.DisplayFor(model => model.Age)</p>
-            <p>@Html.DisplayNameFor(model => model.Position) - @Html.DisplayFor(model => model.Position)</p>
-            <p>@Html.DisplayNameFor(model => model.Team.Name) - @Html.DisplayFor(model => model.Team.Name)</p>
+            <p class="margint-2">
+                <b>
+                    Biography:
+                </b>
+                @Model.Biography
+            </p>
         </div>
     </div>
 </div>
+<hr />
+<h2>Картины художника @Model.Name</h2>
+@{
+    Html.RenderAction("PicturesInPainters", new { id = Model.Id });
+}
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Художники", "Index")
 </p>

@@ -17,7 +17,7 @@ namespace MyPainterJPTVR18.Controllers
         // GET: Painters
         public ActionResult Index()
         {
-            var painters = db.Painters.Include(p => p.Picture);
+            //var painters = db.Painters.Include(p => p.pictures);
             return View(db.Painters.ToList());
         }
 
@@ -29,7 +29,7 @@ namespace MyPainterJPTVR18.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Painter painter = db.Painters.Find(id);
-            painter = db.Painters.Include(p => p.Picture).FirstOrDefault(p => p.Id == id);
+            painter = db.Painters.Include(p => p.pictures).FirstOrDefault(p => p.Id == id);
             if (painter == null)
             {
                 return HttpNotFound();
@@ -40,7 +40,7 @@ namespace MyPainterJPTVR18.Controllers
         //---------------GetImage
         public FileContentResult GetImage(int id)
         {
-            //запрос в БД таблица Players по переданному id
+            //запрос в БД таблица Painters по переданному id
             Painter painter = db.Painters.FirstOrDefault(g => g.Id == id);
             if (painter != null)
             {
@@ -61,7 +61,7 @@ namespace MyPainterJPTVR18.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,Country,Biography,Photo,PhotoType, PictureId")] Painter painter, HttpPostedFileBase
+        public ActionResult Create([Bind(Include = "Id,Name,Country,Biography,Photo,PhotoType")] Painter painter, HttpPostedFileBase
         Image)
         {
             if (ModelState.IsValid)
@@ -79,7 +79,7 @@ namespace MyPainterJPTVR18.Controllers
                     return RedirectToAction("Index");
             }
 
-            ViewBag.PictureId = new SelectList(db.Pictures, "Id", "Name", painter.PictureId);
+            //ViewBag.PictureId = new SelectList(db.Pictures, "Id", "Name", painter);
             return View(painter);
         }
 
@@ -95,7 +95,7 @@ namespace MyPainterJPTVR18.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.PictureId = new SelectList(db.Pictures, "Id", "Name", painter.PictureId);
+            //ViewBag.PictureId = new SelectList(db.Pictures, "Id", "Name", painter.PictureId);
             return View(painter);
         }
 
@@ -104,7 +104,7 @@ namespace MyPainterJPTVR18.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,Country,Biography,Photo,PhotoType,PictureId")] Painter painter, HttpPostedFileBase
+        public ActionResult Edit([Bind(Include = "Id,Name,Country,Biography,Photo,PhotoType")] Painter painter, HttpPostedFileBase
         Image)
         {
             if (ModelState.IsValid)
@@ -120,7 +120,7 @@ namespace MyPainterJPTVR18.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.PictureId = new SelectList(db.Pictures, "Id", "Name", painter.PictureId);
+            //ViewBag.PictureId = new SelectList(db.Pictures, "Id", "Name", painter.PictureId);
             return View(painter);
         }
 
@@ -132,7 +132,7 @@ namespace MyPainterJPTVR18.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Painter painter = db.Painters.Find(id);
-            painter = db.Painters.Include(p => p.PictureId).FirstOrDefault(p => p.Id == id);
+            painter = db.Painters.Include(p => p.pictures).FirstOrDefault(p => p.Id == id);
             if (painter == null)
             {
                 return HttpNotFound();
@@ -158,6 +158,14 @@ namespace MyPainterJPTVR18.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+
+        [ChildActionOnly]
+        public ActionResult PicturesInPainters(int id)
+        {
+            var pp = db.Pictures.Where(p => p.PainterId == id);
+            return PartialView(pp);
         }
     }
 }
