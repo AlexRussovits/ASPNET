@@ -13,11 +13,11 @@
     <div class="row">
         @foreach (var painter in Model)
         {
-            <div class="col-md-3 text-center">
+            <div class="col-md-4 text-center">
                 <h3>@painter.Name</h3>
                 @if (painter.Photo != null)
                 {
-                    <img src="@Url.Action("GetImage", new { painter.Id })" class="img-rounded img" />
+                    <img src="@Url.Action("GetImage", new { painter.Id })" class="img-rounded image" />
                 }
                 <div class="margint-2">
                     @Html.ActionLink("Edit", "Edit", new { id = painter.Id }) |

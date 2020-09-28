@@ -128,6 +128,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PainterPicturesController.cs" />
     <Compile Include="Controllers\PaintersController.cs" />
     <Compile Include="Controllers\PicturesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -185,6 +186,9 @@
     <Content Include="Views\Pictures\Edit.cshtml" />
     <Content Include="Views\Pictures\Index.cshtml" />
     <Content Include="Views\Painters\PicturesInPainters.cshtml" />
+    <Content Include="Views\PainterPictures\Index.cshtml" />
+    <Content Include="Views\PainterPictures\Browse.cshtml" />
+    <Content Include="Views\PainterPictures\PainterPictures.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

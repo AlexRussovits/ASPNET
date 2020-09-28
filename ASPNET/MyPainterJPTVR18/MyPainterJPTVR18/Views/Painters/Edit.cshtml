@@ -43,7 +43,7 @@
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(model => model.Photo, htmlAttributes: new { @class = "controllabel col-md-2" })
+        @Html.LabelFor(model => model.Photo, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.HiddenFor(model => model.Photo, new { htmlAttributes = new { @class
            = "form-control" } })
@@ -51,7 +51,7 @@
            @class = "form-control" } })
             @if (Model.Photo != null)
             {
-                <img src="@Url.Action("GetImage", new { Model.Id })" class="imgrounded" />
+                <img src="@Url.Action("GetImage", new { Model.Id })" class="imgrounded img-edit" />
             }
             <input type="file" name="Image" class="form-control" />
             @Html.ValidationMessageFor(model => model.Photo, "", new { @class = "textdanger" })

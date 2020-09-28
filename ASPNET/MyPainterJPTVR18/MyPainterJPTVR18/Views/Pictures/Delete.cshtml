@@ -12,6 +12,14 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
+            @Html.DisplayNameFor(model => model.painter.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.painter.Name)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.Title)
         </dt>
 
@@ -43,11 +51,12 @@
             @Html.DisplayFor(model => model.Canvas)
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.CanvasType)
+        </dt>
+
         <dd>
-            @if (Model.Canvas != null)
-            {
-                <img src="@Url.Action("GetImage", new { Model.Id })" class="img-edit" />
-            }
+            @Html.DisplayFor(model => model.CanvasType)
         </dd>
 
     </dl>

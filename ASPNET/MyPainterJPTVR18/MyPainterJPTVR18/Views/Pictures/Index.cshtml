@@ -18,7 +18,7 @@
                 <h4>@picture.painter</h4>
                 @if (picture.Canvas != null)
                 {
-                    <img src="@Url.Action("GetImage", new { picture.Id })" class="img-rounded img" />
+                    <img src="@Url.Action("GetImage", new { picture.Id })" class="img-rounded image" width="300" height="400" />
                 }
                 <div class="margint-2">
                     @Html.ActionLink("Edit", "Edit", new { id = picture.Id }) |

@@ -20,7 +20,7 @@
                 </p>
                 @if (p.Canvas != null)
                 {
-                    <img src="@Url.Action("GetImage","Pictures", new { p.Id })" class="img-rounded img" />
+                    <img src="@Url.Action("GetImage","Pictures", new { p.Id })" class="img-rounded image" />
                 }
                 <a href="@Url.Action("Details", "Pictures", new { id = p.Id })" class="margint-2">@p.Title</a>
             </div>

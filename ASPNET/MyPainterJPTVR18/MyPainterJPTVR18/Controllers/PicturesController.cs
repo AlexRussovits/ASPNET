@@ -40,7 +40,7 @@ namespace MyPainterJPTVR18.Controllers
         // GET: Pictures/Create
         public ActionResult Create()
         {
-            ViewBag.PainterId = new SelectList(db.Painters,"id","Name");
+            ViewBag.PainterId = new SelectList(db.Painters, "id", "Name");
             return View();
         }
 

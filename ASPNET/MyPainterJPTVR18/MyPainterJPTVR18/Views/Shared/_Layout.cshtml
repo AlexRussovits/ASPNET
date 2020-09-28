@@ -22,12 +22,29 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Художники", "Index", "Painters")</li>
                     <li>@Html.ActionLink("Картины", "Index", "Pictures")</li>
+                    <li>@Html.ActionLink("Меню художников", "Index", "PainterPictures")</li>
                 </ul>
             </div>
         </div>
     </div>
     <div class="container body-content">
-        @RenderBody()
+        @{ var MyController = ViewContext.RouteData.Values["controller"];}
+        @if (MyController.ToString() == "PainterPictures")
+        {
+            <div style="margin-top:20px;">
+                @{
+                    Html.RenderAction("PainterPictures", "PainterPictures");
+                }
+                <div style="margin-left:25%; min-height:450px;">
+                    @RenderBody()
+                </div>
+            </div>
+        }
+        else
+        {
+            @RenderBody()
+
+        }
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
