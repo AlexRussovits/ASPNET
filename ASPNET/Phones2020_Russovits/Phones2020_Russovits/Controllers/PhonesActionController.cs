@@ -14,12 +14,16 @@ namespace Phones2020_Russovits.Controllers
     {
         private PhonesEntities db = new PhonesEntities();
 
+        [Authorize]
+
         // GET: PhonesAction
         public ActionResult Index()
         {
             var phones = db.Phones.Include(p => p.Company);
             return View(phones.ToList());
         }
+
+        [Authorize]
 
         // GET: PhonesAction/Details/5
         public ActionResult Details(int? id)
@@ -36,6 +40,7 @@ namespace Phones2020_Russovits.Controllers
             return View(phone);
         }
 
+        [Authorize(Roles = "admin")]
         // GET: PhonesAction/Create
         public ActionResult Create()
         {

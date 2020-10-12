@@ -41,6 +41,19 @@ namespace Phones2020_Russovits.Controllers
             return View(phone);
         }
 
+        //-------------- search
+        [HttpPost]
+        public ActionResult PhoneSearch(string PhoneName)
+        {
+            var allPhones = db.Phones.Include(a => a.Company).Where(b => b.Name.Contains(PhoneName)).OrderByDescending(t => t.Price).ToList();
+
+            if (allPhones.Count <= 0)
+            {
+                return HttpNotFound();
+            }
+            return PartialView(allPhones);
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
@@ -49,5 +62,6 @@ namespace Phones2020_Russovits.Controllers
             }
             base.Dispose(disposing);
         }
+
     }
 }

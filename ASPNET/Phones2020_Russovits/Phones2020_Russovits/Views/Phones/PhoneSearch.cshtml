@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Phones2020_Russovits.Models.Phone>
+
+@{
+    ViewBag.Title = "PhoneSearch";
+}
+
+
+<div id="searchresults">
+    <p>
+        <b>Найдены по запросу @Model.Count() моделей</b>
+    </p>
+    <ul>
+        @foreach(var item in Model)
+        {
+            <li>
+                @Html.ActionLink(@item.Name, "Details", new { id = item.Id}) -
+                @Html.DisplayFor(modelItem => item.Price)
+            </li>
+        }
+    </ul>
+</div>

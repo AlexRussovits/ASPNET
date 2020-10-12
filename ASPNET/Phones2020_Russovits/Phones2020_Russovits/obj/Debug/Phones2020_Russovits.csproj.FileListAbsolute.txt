@@ -98,7 +98,6 @@ D:\JPTVR18C#_Russovits\ASPNET\Phones2020_Russovits\Phones2020_Russovits\bin\Micr
 D:\JPTVR18C#_Russovits\ASPNET\Phones2020_Russovits\Phones2020_Russovits\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\JPTVR18C#_Russovits\ASPNET\Phones2020_Russovits\Phones2020_Russovits\bin\Microsoft.Owin.Security.OAuth.xml
 D:\JPTVR18C#_Russovits\ASPNET\Phones2020_Russovits\Phones2020_Russovits\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\JPTVR18C#_Russovits\ASPNET\Phones2020_Russovits\Phones2020_Russovits\obj\Debug\Phones2020_Russovits.csprojAssemblyReference.cache
 D:\JPTVR18C#_Russovits\ASPNET\Phones2020_Russovits\Phones2020_Russovits\obj\Debug\Phones2020_Russovits.csproj.CoreCompileInputs.cache
 D:\JPTVR18C#_Russovits\ASPNET\Phones2020_Russovits\Phones2020_Russovits\obj\Debug\Phones2020_Russovits.csproj.CopyComplete
 D:\JPTVR18C#_Russovits\ASPNET\Phones2020_Russovits\Phones2020_Russovits\obj\Debug\Phones2020_Russovits.dll

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
+    <link type="text/css" rel="stylesheet" href="~/Content/PhonesStyles.css" />
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
@@ -22,13 +23,27 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Phones", "Index", "Phones")</li>
-                    <li>@Html.ActionLink("Phones Action","Index","PhonesAction")</li>
+
+                    @if (Request.IsAuthenticated && User.IsInRole("admin"))
+                    {
+                        <li>@Html.ActionLink("PhonesAction", "Index", "PhonesAction")</li>
+                    }
+
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
     <div class="container body-content">
+        <div style="margin-top:30px; margin-bottom:30px; text-align:right;">
+            Найти модель по названию:
+            @using(Ajax.BeginForm("PhoneSearch", "Phones", new AjaxOptions { UpdateTargetId = "results"}))
+            {
+                <input type="text" name="PhoneName" placeholder="Введите название модели..." />
+                <input type="submit" value="Поиск" />
+            }
+        </div>
+        <div id="results"></div>
         @RenderBody()
         <hr />
         <footer>
@@ -38,6 +53,7 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>
