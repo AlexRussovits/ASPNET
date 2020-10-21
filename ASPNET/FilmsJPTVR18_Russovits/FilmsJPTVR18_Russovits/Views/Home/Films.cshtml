@@ -1,0 +1,44 @@
+﻿@model IEnumerable<FilmsJPTVR18_Russovits.Models.Film>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container-fluid mt-2">
+    <div class="row justify-content-center">
+        @foreach (var film in Model)
+        {
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2>
+                        @Html.ActionLink(film.Title, "Details", "Films", new { film.Id }, null)
+                    </h2>
+                </div>
+                <div class="col-md-4">
+                    @if (film.Cover != null)
+                    {
+                        <img src="@Url.Action("GetImage", new { film.Id })" class="img-thumbnail" />
+                    }
+                </div>
+                <div class="col-md-8">
+                    <div>
+                        <b>Описание:</b><br />
+                        @film.Description
+                    </div>
+                    <div>
+                        <b>Год выхода:</b>
+                        @film.Year
+                    </div>
+                    <div>
+                        <b>Страна:</b>
+                        @film.Country
+                    </div>
+                    <div>
+                        <b>Актеры:</b>
+                        @{Html.RenderAction("GetFilmActors", new { id = film.Id });}
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

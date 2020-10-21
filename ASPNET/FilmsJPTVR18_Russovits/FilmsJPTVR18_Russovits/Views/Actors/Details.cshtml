@@ -1,0 +1,23 @@
+﻿@model FilmsJPTVR18_Russovits.Models.Actor
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="container-fluid mt-5">
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <h3>Актер: @Model.FirstName @Model.LastName</h3>
+            <hr />
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="@Url.Action("GetImage", new { id = Model.Id })" alt="Alternate Text" class="img-adetails" />
+                </div>
+                <div class="col-md-8">
+                    <h4>Фильмография:</h4>
+                    @{ Html.RenderAction("getActorFilm", new { id = Model.Id }); }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

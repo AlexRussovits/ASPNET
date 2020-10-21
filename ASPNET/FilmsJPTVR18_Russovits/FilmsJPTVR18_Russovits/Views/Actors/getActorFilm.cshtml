@@ -1,0 +1,15 @@
+﻿@model IEnumerable<FilmsJPTVR18_Russovits.Models.FilmActor>
+
+@{
+    ViewBag.Title = "getActorFilm";
+}
+
+<ul>
+    @foreach (var film in Model)
+    {
+        <li>
+            @Html.ActionLink(film.Film.Title, "Details", "Films", new { film.Film.Id }, null)
+        </li>
+    }
+</ul>
+</ul>

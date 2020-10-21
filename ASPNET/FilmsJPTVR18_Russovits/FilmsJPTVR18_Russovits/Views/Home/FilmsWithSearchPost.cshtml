@@ -1,0 +1,33 @@
+﻿@model IEnumerable<FilmsJPTVR18_Russovits.Models.Film>
+
+@{
+    ViewBag.Title = "FilmsWithSearchPost";
+}
+
+@foreach (var film in Model)
+{
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h2>
+                @Html.ActionLink(film.Title, "Details", "Films", new { film.Id }, null)
+            </h2>
+        </div>
+        <div class="col-md-8">
+            <div>
+                @film.Description
+            </div>
+            <div>
+                <b>Год выхода:</b>
+                @film.Year
+            </div>
+            <div>
+                <b>Страна:</b>
+                @film.Country
+            </div>
+            <div>
+                <b>Актеры:</b>
+                @{Html.RenderAction("GetFilmActors", new { id = film.Id });}
+            </div>
+        </div>
+    </div>
+}

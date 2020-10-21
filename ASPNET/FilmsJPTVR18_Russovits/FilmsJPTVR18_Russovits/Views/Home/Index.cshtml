@@ -1,0 +1,23 @@
+﻿@model IEnumerable<FilmsJPTVR18_Russovits.Models.Film>
+
+@{
+    ViewBag.Title = "Home";
+}
+
+<div class="jumbotron">
+    <h1>Сайт кино</h1>
+</div>
+
+<div class="row">
+    @foreach (var film in Model)
+    {
+        <div class="col-md-4">
+            @if (film.Cover != null)
+            {
+                <img src="@Url.Action("GetImage", new { film.Id })" class="img-home" />
+            }
+            <h2>@film.Title</h2>
+            @Html.ActionLink("Details", "Details", "Films", new { film.Id }, new { @class = "btn btn-info" })
+        </div>
+    }
+</div>

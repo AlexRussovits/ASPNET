@@ -1,0 +1,59 @@
+﻿@*@model IEnumerable<FilmsJPTVR18_Russovits.Models.Film>*@
+
+@model PagedList.IPagedList<FilmsJPTVR18_Russovits.Models.Film>
+@using PagedList.Mvc;
+
+@{
+    ViewBag.Title = "Films With Search";
+}
+
+<div style="margin-top:30px; margin-bottom:30px; text-align:right">
+    Найти фильм по названию:
+    @using (Ajax.BeginForm("FilmsWithSearchPost", "Home", new AjaxOptions { UpdateTargetId = "results" }))
+    {
+        <input type="text" name="FilmName" placeholder="Введите название фильма" />
+        <input type="submit" value="Search" />
+    }
+</div>
+<div class="container-fluid mt-2">
+    <div class="row justify-content-center">
+        <div id="results">
+            @foreach (var film in Model)
+            {
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h2>
+                            @Html.ActionLink(film.Title, "Details", "Films", new { film.Id }, null)
+                        </h2>
+                    </div>
+                    <div class="col-md-8">
+                        <div>
+                            @film.Description
+                        </div>
+                        <div>
+                            <b>Год выхода:</b>
+                            @film.Year
+                        </div>
+                        <div>
+                            <b>Страна:</b>
+                            @film.Country
+                        </div>
+                        <div>
+                            <b>Актеры:</b>
+                            @{Html.RenderAction("GetFilmActors", new { id = film.Id });}
+                        </div>
+                    </div>
+                </div>
+            }
+
+            <hr />
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    Страница @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) из
+                    @Model.PageCount
+                    @Html.PagedListPager(Model, page => Url.Action("FilmsWithSearch", new { page }))
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
